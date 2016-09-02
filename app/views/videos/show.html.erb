@@ -1,9 +1,13 @@
 <h1>Showing video <%= @video.title %></h1>
 <div class="video">
-  <video width="320" height="240" controls>
+  <video width="640" height="360" controls onclick="this.paused ? this.play() : this.pause();">
     <source src="<%= @video.attachment_url %>" type="video/<%= @extention %>">
       Your browser does not support the video tag.
   </video>
 </div>
-<%= link_to "Delete",  @video, method: :delete, confirm: "Are you sure that you wish to delete #{@video.title}?" %> <br />
+<div class="description">
+  <%= @video.description %>
+</div>
+<%= link_to "Delete",  @video, method: :delete, data: {confirm: "Are you sure that you wish to delete #{@video.title}?"} %>  
+<%= link_to "Edit", edit_video_path %> <br />
 <%= link_to "Back", root_path %>

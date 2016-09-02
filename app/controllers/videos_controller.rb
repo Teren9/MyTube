@@ -11,7 +11,7 @@ class VideosController < ApplicationController
     @video = Video.new(video_params)
 
     if @video.save
-      redirect_to @video, notice: "The vide #{@video.title} was created"
+      redirect_to @video, notice: "The video #{@video.title} was created"
     else
       render "new"
     end
@@ -24,7 +24,7 @@ class VideosController < ApplicationController
     @extention = "webm" if @video.attachment_url.end_with? ".webm"
   end
 
-  def update
+  def edit
     @video = Video.find(params[:id])
   end
 
