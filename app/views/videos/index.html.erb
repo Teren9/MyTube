@@ -1,13 +1,11 @@
 <h1>Videos</h1>
 
-<div class="content">
-  <% @videos.each do |video|%>
-    <div class="<%= video.id %>">
-      <h2><%= link_to video.title, video %></h2>
-      <div class="description">
-        <%= video.description %>
-      </div>
+<% @videos.each do |video|%>
+  <div class="<%= video.id %>">
+    <h2><%= link_to video.title, video %></h2>
+    <div class="description">
+      <%= video.description %>
     </div>
-  <% end %>
-  <%= link_to "New Video", new_video_path %>
-</div>
+  </div>
+<% end %>
+<%= link_to "New Video", new_video_path %>
