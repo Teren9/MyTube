@@ -2,10 +2,10 @@
 
 one:
   title: MyString
-  descrition: MyText
+  description: MyText
   attachment: MyString
 
 two:
   title: MyString
-  descrition: MyText
+  description: MyText
   attachment: MyString
