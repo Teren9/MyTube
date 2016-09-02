@@ -8,6 +8,6 @@
 <p class="description" >
   <%= @video.description %>
 </p>
-<%= link_to "Delete",  @video, method: :delete, data: {confirm: "Are you sure that you wish to delete #{@video.title}?"} %>
+<%= link_to "Delete",  @video, method: :delete, data: {confirm: "Are you sure that you wish to delete #{@video.title}?"} %> | 
 <%= link_to "Edit", edit_video_path %> <br />
 <%= link_to "Back", root_path %>
