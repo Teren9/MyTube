@@ -23,6 +23,9 @@ a:hover{
 .content{
   margin-left: 10%;
 }
+.noice{
+  text-color: green;
+}
 .description{
   margin-left: 2%;
 }
